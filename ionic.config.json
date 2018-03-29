@@ -1,0 +1,8 @@
+{
+  "name": "klovr",
+  "app_id": "dc49254f",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
