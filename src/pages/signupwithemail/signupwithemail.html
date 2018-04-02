@@ -1,0 +1,61 @@
+<!--
+  Generated template for the SignupwithemailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar color="newcolor">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title><img src="assets/imgs/myklovr.png"  alt="homepage" class="myklovr-logo" /></ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-header>
+          <strong>Sign Up</strong> 
+          </ion-card-header>
+          <hr> 
+                    
+      <ion-list inset>
+         <ion-item>
+          <ion-label color="primary" stacked>First Name</ion-label>
+            <ion-input type="text" placeholder="Enter First Name"></ion-input>
+         </ion-item>
+         <ion-item>
+            <ion-label color="primary" stacked>Last Name</ion-label>
+              <ion-input type="text" placeholder="Enter Last Name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" stacked>Email</ion-label>
+              <ion-input type="email" placeholder="Enter Email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary" stacked>Password</ion-label>
+          <ion-input type="password" placeholder="Enter Password"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" stacked>Confirm Password</ion-label>
+            <ion-input type="password" placeholder="Confirm Password"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" stacked>Date Of Birth</ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate" placeholder="Enter Date Of Birth"></ion-datetime>
+        </ion-item>
+         <ion-item>
+             <ion-label>I agree to all <b>Terms</b> and <br><b>Privacy Policies</b></ion-label>
+             <ion-checkbox [(ngModel)]="remember" (ionChange)="updateRemember()"></ion-checkbox>
+         </ion-item>
+    </ion-list>
+  <div padding>
+    <button ion-button color="myklovr" block>Sign Up</button>
+  </div>
+  <ion-item>
+    <ion-label text-center>Already have an account? <a>Sign In</a></ion-label>
+  </ion-item>
+  </ion-card>
+</ion-content>

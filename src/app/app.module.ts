@@ -8,22 +8,36 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { RegisterPage } from '../pages/register/register';
+import { LoginPage } from '../pages/login/login';
+import { FormsModule } from '@angular/forms';
+import { SignupPage } from '../pages/signup/signup';
+import { SignupwithemailPage } from '../pages/signupwithemail/signupwithemail';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    LoginPage,
+    RegisterPage,
+    SignupPage,
+    SignupwithemailPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    FormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    LoginPage,
+    RegisterPage,
+    SignupPage,
+    SignupwithemailPage
   ],
   providers: [
     StatusBar,
