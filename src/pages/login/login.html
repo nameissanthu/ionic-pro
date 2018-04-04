@@ -30,12 +30,12 @@
     <ion-list inset>
        <ion-item>
         <ion-label color="primary" stacked>Email</ion-label>
-          <ion-input type="email" placeholder="Enter Email"></ion-input>
+          <ion-input type="email" [(ngModel)]="email" name="email" placeholder="Enter Email"></ion-input>
        </ion-item>
 
        <ion-item>
         <ion-label color="primary" stacked>Password</ion-label>
-        <ion-input type="password" placeholder="Enter Password"></ion-input>
+        <ion-input type="password" [(ngModel)]="password" name="password " placeholder="Enter Password"></ion-input>
        </ion-item>
    
        <ion-item>
@@ -47,7 +47,7 @@
        </ion-item>
     </ion-list>
 <div padding>
-  <button ion-button color="myklovr" block>Login in</button>
+  <button ion-button color="myklovr" block (click)="login()">Login in</button>
 </div>
 <ion-item>
   <ion-label text-center>Don't have an account? <a>Sign Up</a></ion-label>

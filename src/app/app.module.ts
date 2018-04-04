@@ -13,6 +13,13 @@ import { LoginPage } from '../pages/login/login';
 import { FormsModule } from '@angular/forms';
 import { SignupPage } from '../pages/signup/signup';
 import { SignupwithemailPage } from '../pages/signupwithemail/signupwithemail';
+import { SampleProvider } from '../providers/samplesvs/samplesvs';
+import { SamplePage } from '../pages/sample/sample';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { SamplepostPage } from '../pages/samplepost/samplepost';
+import { KlovrloginPage } from '../pages/klovrlogin/klovrlogin';
+import { DashboardPage } from '../pages/dashboard/dashboard';
 
 @NgModule({
   declarations: [
@@ -22,13 +29,19 @@ import { SignupwithemailPage } from '../pages/signupwithemail/signupwithemail';
     LoginPage,
     RegisterPage,
     SignupPage,
-    SignupwithemailPage
+    SamplePage,
+    SignupwithemailPage,
+    SamplepostPage,
+    KlovrloginPage,
+    DashboardPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    FormsModule
-  ],
+    FormsModule,
+    HttpClientModule,
+    HttpModule,
+    ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
@@ -37,12 +50,18 @@ import { SignupwithemailPage } from '../pages/signupwithemail/signupwithemail';
     LoginPage,
     RegisterPage,
     SignupPage,
-    SignupwithemailPage
+    SamplePage,
+    SignupwithemailPage,
+    SamplepostPage,
+    KlovrloginPage,
+    DashboardPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    SampleProvider,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    SampleProvider
   ]
 })
 export class AppModule {}
